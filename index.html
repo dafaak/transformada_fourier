@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>PDI</title>
+
+        <script src="js/fourier.js"></script>
+        <script src="js/main.js"></script>
+    </head>
+    <body>
+        <h1>Transformada de Fourier</h1>
+
+        <div>
+            <div style="display: inline-block; margin-right: 22px; vertical-align: top">
+                1. Imagen original
+                <br>
+                <canvas id="canvas0"></canvas>
+                <br>
+                <input type="button" id="draw-cs-btn" value="Cargar 'CS'">
+                <input type="button" id="draw-circle-btn" value="Cargar circulo">
+                <br>
+                <input type="button" id="draw-grace-btn" value="Cargar Grace Helbig">
+                <br>
+
+                <input type="button" id="draw-img-btn" value="Draw">
+            </div>
+            <div style="display: inline-block; vertical-align: top">
+                2.Imagen en el dominio de la frecuencia
+                <br>
+                <canvas id="canvas1"></canvas>
+                <br>
+                <input type="text" id="low-freq-radius" placeholder="Low pass radius"> px
+                <br>
+                <input type="text" id="high-freq-radius" placeholder="High pass radius"> px
+                <br>
+                <input type="button" id="transform-btn" value="DFT 2D">
+            </div>
+        </div>
+        <br>
+        <div>
+            <div style="display: inline-block; margin-right: 22px; vertical-align: top">
+                3. Imagen reconstruida
+                <br>
+                <canvas id="canvas2"></canvas><br>
+                <input type="button" id="reconstruct-btn" value="Reconstruir imagen">
+            </div>
+            <div style="display: inline-block; vertical-align: top">
+                4. Diferencias
+                <br>
+                <canvas id="canvas3"></canvas><br>
+                <input type="button" id="difference-btn" value="Ver diferencias">
+            </div>
+        </div>
+    </body>
+</html>
